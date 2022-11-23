@@ -25,7 +25,7 @@ public class StudentController {
     @GetMapping(path = "/index")
     public String students(Model model, @RequestParam(name = "keyword", defaultValue = "")
     String keyword) {
-//
+
         List<Student> students;
         if (keyword.isEmpty()) {
             students = studentRepository.findAll();
